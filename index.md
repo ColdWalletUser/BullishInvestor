@@ -316,7 +316,7 @@ h2 { text-align: center; color: #24292f; margin: 40px 0 20px 0; }
 </div>
 
 <div style="text-align: center; margin: 40px 0;">
-  <a href="https://crypto-pilot.space" class="subscribe-cta">
+  <a href="https://shop.autocryptolabs.space/" class="subscribe-cta">
     <div class="cta-main">💡 Du musst nicht clever sein — du musst nur wählen</div>
     <div class="cta-subtitle">Jeder, der heute startet, hat morgen eine Chance</div>
     <div class="cta-features">✓ Kein Vorkenntnis ✓ Kein Kapital-Hochrisiko ✓ Einfach beginnen</div>
@@ -442,4 +442,5 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 });
+
 </script>
