@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AlphaSignal — AI анализирует рынок. Вы получаете готовые сделки</title>
+  <title>AlphaSignal — Крипто-сигналы с открытой статистикой</title>
 </head>
 <body>
 
@@ -27,53 +27,6 @@ header nav { display: none !important; }
   max-width: 700px;
   margin: 0 auto;
   line-height: 1.5;
-}
-
-/* Hero CTA Button (Variant B) */
-.hero-cta {
-  display: inline-block;
-  margin: 25px auto;
-  background: linear-gradient(145deg, #ff6b35, #f7931e, #ff8e53);
-  color: white !important;
-  padding: 0;
-  text-decoration: none;
-  border-radius: 15px;
-  box-shadow: 0 15px 35px rgba(255,107,53,0.4);
-  overflow: hidden;
-  transform: perspective(1000px) rotateX(5deg);
-  transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
-}
-.hero-cta .cta-main {
-  background: linear-gradient(145deg, #ff6b35, #f7931e);
-  padding: 18px 35px;
-  font-size: 1.2em;
-  font-weight: 900;
-  letter-spacing: -0.5px;
-  position: relative;
-}
-.hero-cta .cta-main::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.3) 50%, transparent 100%);
-  transform: translateX(-100%);
-  transition: transform 0.6s;
-}
-.hero-cta .cta-sub {
-  padding: 12px 35px;
-  font-weight: 600;
-  font-size: 0.9em;
-  background: linear-gradient(145deg, #f7931e, #ff8e53);
-}
-.hero-cta:hover {
-  transform: perspective(1000px) rotateX(0deg) translateY(-8px) scale(1.02);
-  box-shadow: 0 25px 50px rgba(255,107,53,0.6);
-}
-.hero-cta:hover .cta-main::before {
-  transform: translateX(300%);
 }
 
 /* Live Prices */
@@ -109,40 +62,43 @@ header nav { display: none !important; }
   font-weight: bold !important;
 }
 
-/* AI How It Works */
-.ai-block {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  color: white;
-  padding: 40px;
+/* Stats Block */
+.stats-block {
+  background: #f8f9fa;
   border-radius: 20px;
+  padding: 35px;
   margin: 40px auto;
   max-width: 900px;
   text-align: center;
 }
-.ai-block h2 {
-  color: white;
+.stats-block h2 {
   margin: 0 0 25px 0;
+  color: #24292f;
+  font-size: 2em;
 }
-.ai-steps {
+.stats-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 25px;
   margin-top: 20px;
 }
-.ai-step {
-  background: rgba(255,255,255,0.1);
+.stat-item {
+  background: white;
   padding: 25px;
   border-radius: 15px;
-  backdrop-filter: blur(10px);
+  box-shadow: 0 5px 20px rgba(0,0,0,0.08);
 }
-.ai-icon {
-  font-size: 2.5em;
-  margin-bottom: 15px;
+.stat-number {
+  font-size: 2.8em;
+  font-weight: 900;
+  color: #667eea;
   display: block;
 }
-.ai-text {
-  font-size: 1.05em;
-  line-height: 1.5;
+.stat-label {
+  font-size: 1em;
+  color: #666;
+  margin-top: 8px;
+  display: block;
 }
 
 /* Signal Examples */
@@ -221,6 +177,92 @@ header nav { display: none !important; }
   color: #856404;
 }
 
+/* Trust Block */
+.trust-block {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 40px;
+  border-radius: 20px;
+  margin: 40px auto;
+  max-width: 900px;
+  text-align: center;
+}
+.trust-block h2 {
+  color: white;
+  margin: 0 0 25px 0;
+}
+.trust-features {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  margin-top: 20px;
+}
+.trust-item {
+  background: rgba(255,255,255,0.1);
+  padding: 25px;
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+}
+.trust-icon {
+  font-size: 2.5em;
+  margin-bottom: 15px;
+  display: block;
+}
+.trust-text {
+  font-size: 1.05em;
+  line-height: 1.5;
+}
+
+/* How It Works */
+.how-it-works {
+  margin: 50px auto;
+  max-width: 800px;
+  text-align: center;
+}
+.how-it-works h2 {
+  color: #24292f;
+  font-size: 2em;
+  margin-bottom: 30px;
+}
+.steps {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+.step {
+  background: #f8f9fa;
+  padding: 30px 20px;
+  border-radius: 15px;
+  position: relative;
+}
+.step-number {
+  position: absolute;
+  top: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3em;
+  font-weight: 900;
+}
+.step-title {
+  font-size: 1.2em;
+  font-weight: 700;
+  margin-top: 15px;
+  color: #24292f;
+}
+.step-desc {
+  color: #666;
+  margin-top: 10px;
+  line-height: 1.5;
+}
+
 /* Control Block */
 .control-block {
   background: #f0fff4;
@@ -242,82 +284,38 @@ header nav { display: none !important; }
   line-height: 1.6;
 }
 
-/* Simplicity Block */
-.simplicity-block {
-  background: #f8f9fa;
+/* Risk Warning */
+.risk-block {
+  background: #fff8e6;
+  border: 2px solid #ffc107;
   border-radius: 20px;
-  padding: 40px;
-  margin: 40px auto;
-  max-width: 900px;
-  text-align: center;
-}
-.simplicity-block h2 {
-  color: #24292f;
-  margin: 0 0 25px 0;
-  font-size: 2em;
-}
-.simplicity-features {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 25px;
-  margin-top: 20px;
-}
-.simplicity-item {
-  background: white;
-  padding: 25px;
-  border-radius: 15px;
-  box-shadow: 0 5px 20px rgba(0,0,0,0.08);
-}
-.simplicity-icon {
-  font-size: 2.5em;
-  margin-bottom: 15px;
-  display: block;
-}
-.simplicity-text {
-  font-size: 1.05em;
-  color: #555;
-  line-height: 1.5;
-}
-
-/* Trust Block */
-.trust-block {
-  background: #f0f7ff;
-  border: 2px solid #90caf9;
-  border-radius: 20px;
-  padding: 35px;
+  padding: 30px;
   margin: 40px auto;
   max-width: 900px;
 }
-.trust-block h2 {
-  color: #1565c0;
+.risk-block h2 {
+  color: #856404;
   margin: 0 0 20px 0;
-  font-size: 1.8em;
-  text-align: center;
+  font-size: 1.6em;
 }
-.trust-list {
+.risk-list {
   list-style: none;
   padding: 0;
   margin: 0;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
 }
-.trust-list li {
-  padding: 20px;
-  background: white;
-  border-radius: 12px;
-  text-align: center;
+.risk-list li {
+  padding: 12px 0;
+  padding-left: 35px;
+  position: relative;
+  color: #856404;
   font-size: 1.05em;
-  color: #1565c0;
   line-height: 1.5;
 }
-.trust-list li::before {
-  content: "✓";
-  display: block;
-  font-size: 1.8em;
-  color: #00cc6a;
-  margin-bottom: 10px;
-  font-weight: 900;
+.risk-list li::before {
+  content: "⚠️";
+  position: absolute;
+  left: 0;
+  top: 10px;
 }
 
 /* Reviews */
@@ -390,40 +388,6 @@ header nav { display: none !important; }
 .review-card.positive {
   background: #f0fff4;
   border-color: #b2dfdb;
-}
-
-/* Risk Warning */
-.risk-block {
-  background: #fff8e6;
-  border: 2px solid #ffc107;
-  border-radius: 20px;
-  padding: 30px;
-  margin: 40px auto;
-  max-width: 900px;
-}
-.risk-block h2 {
-  color: #856404;
-  margin: 0 0 20px 0;
-  font-size: 1.6em;
-}
-.risk-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-.risk-list li {
-  padding: 12px 0;
-  padding-left: 35px;
-  position: relative;
-  color: #856404;
-  font-size: 1.05em;
-  line-height: 1.5;
-}
-.risk-list li::before {
-  content: "⚠️";
-  position: absolute;
-  left: 0;
-  top: 10px;
 }
 
 /* CTA Button */
@@ -500,30 +464,51 @@ header nav { display: none !important; }
   transform: translateX(300%);
 }
 
-/* Features Bullets */
-.features-bullets {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  margin: 25px 0;
-  flex-wrap: wrap;
+/* Floating CTA Button (Variant A) */
+.floating-cta {
+  position: fixed !important;
+  top: 20px !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  z-index: 10000 !important;
+  box-shadow: 0 10px 40px rgba(255,107,53,0.5) !important;
+  animation: floatPulse 2s ease-in-out infinite !important;
+  display: inline-block !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border-radius: 50px !important;
+  background: linear-gradient(145deg, #ff6b35, #f7931e) !important;
+  text-decoration: none !important;
+  max-width: 90% !important;
 }
-.feature-item {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 1.1em;
-  color: #555;
-  font-weight: 600;
+.floating-cta .cta-main {
+  padding: 18px 40px !important;
+  font-size: 1.2em !important;
+  border-radius: 50px !important;
+  background: transparent !important;
+  white-space: nowrap !important;
+  color: white !important;
+  font-weight: 900 !important;
+  letter-spacing: -0.5px !important;
 }
-.feature-check {
-  color: #00cc6a;
-  font-size: 1.3em;
+.floating-cta .cta-subtitle,
+.floating-cta .cta-note-top,
+.floating-cta .cta-note-bottom {
+  display: none !important;
+}
+@keyframes floatPulse {
+  0%, 100% { transform: translateX(-50%) scale(1); }
+  50% { transform: translateX(-50%) scale(1.05); }
+}
+.floating-cta:hover {
+  animation: none !important;
+  transform: translateX(-50%) translateY(-5px) !important;
+  box-shadow: 0 15px 50px rgba(255,107,53,0.7) !important;
 }
 
 /* Responsive */
 @media (max-width: 768px) {
-  .ai-steps, .simplicity-features, .trust-list {
+  .stats-grid, .trust-features, .steps {
     grid-template-columns: 1fr;
   }
   .signal-card {
@@ -537,36 +522,12 @@ header nav { display: none !important; }
   .hero h1 {
     font-size: 2.2em;
   }
-  .features-bullets {
-    flex-direction: column;
-    gap: 15px;
-  }
 }
 </style>
 
 <div class="hero">
-  <h1>AI анализирует рынок — вы получаете готовые сделки</h1>
-  <p class="hero-subtitle">Без сложных графиков и терминов — только конкретные точки входа и выхода</p>
-
-  <a href="https://autocrypto.space/" class="hero-cta">
-    <div class="cta-main">🎁 Получить 5 сигналов бесплатно</div>
-    <div class="cta-sub">🔒 Без оплаты. Без привязки карты.</div>
-  </a>
-
-  <div class="features-bullets">
-    <div class="feature-item">
-      <span class="feature-check">✔</span>
-      <span>AI анализ 24/7</span>
-    </div>
-    <div class="feature-item">
-      <span class="feature-check">✔</span>
-      <span>Готовые уровни входа</span>
-    </div>
-    <div class="feature-item">
-      <span class="feature-check">✔</span>
-      <span>Подходит без опыта</span>
-    </div>
-  </div>
+  <h1>Крипто-сигналы с открытой статистикой и понятными точками входа</h1>
+  <p class="hero-subtitle">Все сигналы публикуются в реальном времени — без удаления и "рисованных" результатов</p>
 </div>
 
 <div class="live-prices">
@@ -583,31 +544,26 @@ header nav { display: none !important; }
   </div>
 </div>
 
-<div class="ai-block">
-  <h2>🤖 Как работает система</h2>
-  <div class="ai-steps">
-    <div class="ai-step">
-      <span class="ai-icon">📊</span>
-      <p class="ai-text">Алгоритм анализирует рынок 24/7, обрабатывая тысячи данных в секунду</p>
+<div class="stats-block">
+  <h2>📊 Статистика за 30 дней</h2>
+  <div class="stats-grid">
+    <div class="stat-item">
+      <span class="stat-number">124</span>
+      <span class="stat-label">сигнала опубликовано</span>
     </div>
-    <div class="ai-step">
-      <span class="ai-icon">🎯</span>
-      <p class="ai-text">Формирует сигнал с точными точками входа, выхода и стоп-лосс</p>
+    <div class="stat-item">
+      <span class="stat-number">62%</span>
+      <span class="stat-label">закрылись в плюс</span>
     </div>
-    <div class="ai-step">
-      <span class="ai-icon">📱</span>
-      <p class="ai-text">Вы получаете готовую сделку в удобном формате</p>
+    <div class="stat-item">
+      <span class="stat-number">+2.1%</span>
+      <span class="stat-label">средний результат</span>
     </div>
   </div>
 </div>
 
-<div class="control-block">
-  <h2>🔐 Вы управляете сделками сами</h2>
-  <p>AI не имеет доступа к вашим средствам. Он только показывает точки входа и выхода. Вы самостоятельно открываете и закрываете сделки на своей бирже.</p>
-</div>
-
 <div class="signals-section">
-  <h2>📈 Примеры сигналов от AI</h2>
+  <h2>📈 Примеры последних сигналов</h2>
   
   <div class="signal-card">
     <div class="signal-pair">BTC/USDT</div>
@@ -690,31 +646,48 @@ header nav { display: none !important; }
   </div>
 </div>
 
-<div class="simplicity-block">
-  <h2>🎯 Без сложного обучения</h2>
-  <div class="simplicity-features">
-    <div class="simplicity-item">
-      <span class="simplicity-icon">📚</span>
-      <p class="simplicity-text">Вам не нужно разбираться в графиках и индикаторах</p>
+<div class="trust-block">
+  <h2>Почему нам можно доверять</h2>
+  <div class="trust-features">
+    <div class="trust-item">
+      <span class="trust-icon">📢</span>
+      <p class="trust-text">Мы не удаляем убыточные сделки — вся история сохраняется</p>
     </div>
-    <div class="simplicity-item">
-      <span class="simplicity-icon">📋</span>
-      <p class="simplicity-text">Просто следуете готовым инструкциям в сигнале</p>
+    <div class="trust-item">
+      <span class="trust-icon">⏱️</span>
+      <p class="trust-text">Публикуем сигналы в реальном времени, а не постфактум</p>
     </div>
-    <div class="simplicity-item">
-      <span class="simplicity-icon">⚡</span>
-      <p class="simplicity-text">Начинаете торговать сразу после регистрации</p>
+    <div class="trust-item">
+      <span class="trust-icon">🔍</span>
+      <p class="trust-text">Вы можете проверить всю историю сделок самостоятельно</p>
     </div>
   </div>
 </div>
 
-<div class="trust-block">
-  <h2>Прозрачная история сигналов</h2>
-  <ul class="trust-list">
-    <li>Все сигналы сохраняются в истории</li>
-    <li>Нет удаления убыточных сделок</li>
-    <li>Реальные результаты без приукрашивания</li>
-  </ul>
+<div class="how-it-works">
+  <h2>Как это работает</h2>
+  <div class="steps">
+    <div class="step">
+      <div class="step-number">1</div>
+      <div class="step-title">Получаете сигнал</div>
+      <div class="step-desc">Точка входа, выхода и стоп-лосс в одном сообщении</div>
+    </div>
+    <div class="step">
+      <div class="step-number">2</div>
+      <div class="step-title">Открываете сделку</div>
+      <div class="step-desc">Самостоятельно на своей бирже по указанным уровням</div>
+    </div>
+    <div class="step">
+      <div class="step-number">3</div>
+      <div class="step-title">Закрываете по уровням</div>
+      <div class="step-desc">Фиксируете прибыль или стоп по достижении уровней</div>
+    </div>
+  </div>
+</div>
+
+<div class="control-block">
+  <h2>🔐 Вы полностью контролируете процесс</h2>
+  <p>Мы не имеем доступа к вашим средствам. Вы сами открываете и закрываете сделки на своей бирже. Никаких доверительных управлений и передачи доступа.</p>
 </div>
 
 <div class="reviews-section">
@@ -807,6 +780,11 @@ header nav { display: none !important; }
   </a>
 </div>
 
+<!-- Плавающая кнопка (всегда видна) -->
+<a href="https://shop.autocryptolabs.space/" class="floating-cta subscribe-cta">
+  <div class="cta-main">🎁 5 сигналов бесплатно</div>
+</a>
+
 <script>
 let userData = null;
 let trackingToken = null;
@@ -866,13 +844,16 @@ function loadUserData() {
 }
 
 function updateCTAButton() {
-  const ctaLink = document.querySelector('.subscribe-cta');
-  if (ctaLink && userData.token) {
-    const baseUrl = 'https://shop.autocryptolabs.space/lk/index.php';
+  const ctaLinks = document.querySelectorAll('.subscribe-cta, .floating-cta');
+  if (userData.token) {
+    const baseUrl = 'https://shop.autocryptolabs.space/track/index.php';
     const utm = getGermanUTM();
     const shopUrl = `${baseUrl}?token=${userData.token}&${utm}`;
-    ctaLink.href = shopUrl;
-    console.log(`🔗 CTA → ${shopUrl}`);
+    
+    ctaLinks.forEach(link => {
+      link.href = shopUrl;
+      console.log(`🔗 CTA → ${shopUrl}`);
+    });
   }
 }
 
@@ -893,12 +874,11 @@ document.addEventListener('DOMContentLoaded', function() {
   const token = urlParams.get('token');
 
   if (token) {
-    const ctaButtons = document.querySelectorAll('.subscribe-cta');
+    const ctaButtons = document.querySelectorAll('.subscribe-cta, .floating-cta');
     ctaButtons.forEach(button => {
+      const baseUrl = 'https://shop.autocryptolabs.space/lk/index.php';
       const utm = getGermanUTM();
-      const newHref = button.href.includes('?')
-        ? `${button.href}&token=${token}&${utm}`
-        : `${button.href}?token=${token}&${utm}`;
+      const newHref = `${baseUrl}?token=${token}&${utm}`;
       button.href = newHref;
       button.setAttribute('data-track', token.slice(-6));
       console.log(`🔗 Updated: ${newHref}`);
