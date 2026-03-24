@@ -868,7 +868,7 @@ function loadUserData() {
 function updateCTAButton() {
   const ctaLink = document.querySelector('.subscribe-cta');
   if (ctaLink && userData.token) {
-    const baseUrl = 'https://shop.autocryptolabs.space/track/index.php';
+    const baseUrl = 'https://shop.autocryptolabs.space/lk/index.php';
     const utm = getGermanUTM();
     const shopUrl = `${baseUrl}?token=${userData.token}&${utm}`;
     ctaLink.href = shopUrl;
